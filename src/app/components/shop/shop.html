@@ -1,0 +1,12 @@
+<div class="shop-grid">
+  @if (products | async; as productList) {
+    @for (product of productList; track product.id) {
+      <app-shopcard
+        [title]="product.title"
+        [image]="product.image"
+        [price]="product.price"
+        [description]="product.description">
+      </app-shopcard>
+    }
+  }
+</div>
